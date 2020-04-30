@@ -1,10 +1,12 @@
 {
   "name": "node-with-typescript",
   "version": "0.0.1",
-  "description": "",
+  "description": "start node project with typescript",
   "main": "src/index.ts",
   "scripts": {
-    "start": "./node_modules/.bin/tsc && node dist/index.js"
+    "start": "nodemon --ext ts --ignore node_modules --watch src --exec ts-node src/index.ts",
+    "build": "./node_modules/.bin/tsc",
+    "server": "node dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,8 @@
   },
   "devDependencies": {
     "@types/koa": "^2.11.3",
+    "nodemon": "^2.0.3",
+    "ts-node": "^8.9.1",
     "typescript": "^3.8.3"
   }
 }

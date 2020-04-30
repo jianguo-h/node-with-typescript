@@ -1,11 +1,18 @@
 import Koa from 'koa';
+import { IResponse } from './types';
 
 const port: number = 3000;
 const app = new Koa();
 
+
 app.use(async ctx => {
-  ctx.body = 'hello world!';
-});;
+  const res: IResponse = {
+    data: 'hello world! auto compile',
+    code: 200,
+    status: 'OK'
+  }
+  ctx.body = JSON.stringify(res);
+});
 
 app.listen(port, () => {
   console.log('server start at port ', port)
