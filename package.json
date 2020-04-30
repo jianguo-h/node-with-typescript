@@ -1,0 +1,26 @@
+{
+  "name": "node-with-typescript",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "./node_modules/.bin/tsc && node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jianguo-h/node-with-typescript.git"
+  },
+  "author": "jianguo-h",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jianguo-h/node-with-typescript/issues"
+  },
+  "homepage": "https://github.com/jianguo-h/node-with-typescript#readme",
+  "dependencies": {
+    "koa": "^2.11.0"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.11.3",
+    "typescript": "^3.8.3"
+  }
+}
