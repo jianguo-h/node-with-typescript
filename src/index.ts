@@ -1,7 +1,7 @@
 import Koa from 'koa';
 import { IResponse } from './types';
 
-const port = 3000;
+const port = Number(process.env.PORT ?? 3000);
 const app = new Koa();
 
 app.use(async ctx => {
